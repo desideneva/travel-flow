@@ -86,15 +86,17 @@ user_preference = get_user_preference()
 # Display countries based on user's preference
 selected_countries = display_countries(user_preference)
 
-# Get user's input for the country
-chosen_country = input("Enter the country you want to explore: ")
+# Loop for choosing countries until a valid one is entered
+while True:
+    # Get user's input for the country
+    chosen_country = input("Enter the country you want to explore: ")
 
-# Validate the entered country
-if is_valid_country(chosen_country, selected_countries):
-    print(f"You chose {chosen_country}. Let's plan your adventure!")
-else:
-    print("This country is not on our destinations list. Please, choose one from the list.")
-
+    # Validate the entered country
+    if is_valid_country(chosen_country, selected_countries):
+        print(f"You chose {chosen_country}. Let's plan your adventure!")
+        break
+    else:
+        print("This country is not on our destinations list. Please, choose one from the list.")
 
 
 
