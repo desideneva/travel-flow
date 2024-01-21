@@ -31,7 +31,6 @@ def get_user_preferences():
         else:
             print("Invalid input. Please enter a number between 1 and 6.")
 
-if __name__ == "__main__":
     user_preference = get_user_preferences()
     print(f"You chose preference number {user_preference}.")
 
