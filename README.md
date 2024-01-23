@@ -5,3 +5,25 @@ Travel-Flow is designed to assist users in finding their ideal travel destinatio
 
 ## Target Audience:
 This project is tailored for individuals seeking personalized travel recommendations. Whether users are adventure enthusiasts, cultural explorers, active travelers, relaxation seekers, family vacation planners, or solo adventurers, Travel-Flow aims to cater to a broad audience with diverse travel preferences.
+
+## Key Features:
+- User-Friendly Interface: 
+  
+  The project provides a simple and user-friendly interface, ensuring that users can easily navigate through the different travel preferences.
+
+- Wide Range of Destinations:
+
+  Travel-Flow sources destination data from a spreadsheet, offering an extensive list of countries for each travel preference. This ensures a comprehensive and varied selection for users.
+
+- Dynamic Preference Selection: 
+
+  Users can choose from various travel preferences, including adventure, cultural exploration, active pursuits, relaxing getaways, family-friendly destinations, and solo adventures.
+
+- Country Validation: 
+
+  The project validates user input to ensure that selected countries align with the user's chosen travel preference, providing a seamless and error-free experience.
+
+- Restart Option:
+
+  Users have the option to restart the selection process, providing flexibility in exploring different travel preferences without restarting the entire program.
+  
