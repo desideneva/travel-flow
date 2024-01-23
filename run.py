@@ -74,12 +74,7 @@ def display_countries_for_adventure(get_user_adventure_preference):
         explorer_countries = ["Mongolia", "Papua New Guinea", "Bhutan", "Ethiopia", "Madagascar", "Suriname", "Guyana", "Namibia", "Kyrgyzstan", "Laos"]
         print("Here are the countries for Explorer:")
         print(", ".join(explorer_countries))
-        handle_country_selection(countries_list)
-
-
-
-         
-            
+        handle_country_selection(countries_list)            
 
 def get_user_cultural_preference():
     print("Please choose your cultural preference:")
@@ -119,14 +114,14 @@ def display_countries_for_active(active_preference):
     handle_country_selection(countries_list)
 
 def get_user_relaxing_preference():
-     """
+    """
     Function to prompt the user to choose their relaxing preference.
     """
     print("Please choose your relaxing preference.")
     display_countries_for_relaxing("4")
 
 def display_countries_for_relaxing(relaxing_preference):
-     """
+    """
     Display the list of countries for Health, Spa & Wellbeing based on user's preference.
     Args:
         relaxing_preference (str): The user's relaxing preference.
@@ -137,22 +132,22 @@ def display_countries_for_relaxing(relaxing_preference):
     print(", ".join(countries_list))
     handle_country_selection(countries_list)
 
-# Only one option for Family
 def get_user_family_preference():
-    print("Please choose your family preference:")
-    print("1. Family")
-
-    while True:
-        user_choice = input("Enter the number of your preference: ")
-        if user_choice == "1":
-            display_countries_for_family(user_choice)
-            break
-        else:
-            print("Invalid choice. Please enter 1.")
+    """
+    Function to prompt the user to choose their family preference.
+    """
+    print("Please choose your family preference.")
+    display_countries_for_family("5")
 
 def display_countries_for_family(family_preference):
-    countries_list = destinations_worksheet.col_values(int(family_preference) + 1)[1:]
-    print(f"Here are the countries for Family:")
+    """
+    Display the list of countries for Family based on user's preference.
+    Args:
+        family_preference (str): The user's family preference.
+    """
+    # Retrieve the list of countries from the corresponding column in the spreadsheet
+    countries_list = destinations_worksheet.col_values(10)[1:]
+    print(f"Here are the countries families prefer to visit:")
     print(", ".join(countries_list))
     handle_country_selection(countries_list)
 
@@ -162,11 +157,10 @@ def handle_country_selection(selected_countries):
             chosen_country = input("Enter the country you want to explore: ")
             # Validate the entered country
             if is_valid_country(chosen_country, selected_countries):
-                print(f"You chose {chosen_country}. Let's plan your adventure!")
+                print(f"You chose {chosen_country}. Let's plan your unforgettable journey!")
                 restart()
             else:
                 print("This country is not on our destinations list. Please, choose one from the list.")
-
 
 # Function to check if the entered country is in the list
 def is_valid_country(country, countries_list):
