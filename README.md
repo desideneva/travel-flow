@@ -53,3 +53,39 @@ This project is tailored for individuals seeking personalized travel recommendat
     Offer a more detailed forecast, including daily and weekly predictions.
     Include information on typical weather patterns during the chosen travel dates.
 
+## Solved Bugs
+
+1. Undefined Variable Error:
+
+    - Issue: Reference to adventure_countries and explorer_countries variables before their assignment.
+    - Resolution: Defined and assigned values to these variables before referencing them.
+
+2. Input Validation for User Preferences:
+
+    - Issue: Lack of input validation for user preferences, potentially allowing non-numeric inputs.
+    - Resolution: Added input validation to ensure the user enters a valid numeric choice.
+
+3. Function Parameter Mismatch:
+
+    - Issue: Mismatch in function parameters when calling display_countries_for_adventure without passing the user_preference parameter.
+    - Resolution: Adjusted function calls to pass the correct parameters.
+
+4. Indentation Error:
+
+    - Issue: Incorrect indentation in the restart function.
+    - Resolution: Fixed the indentation to resolve the syntax error.
+
+5. Loop Break Location:
+
+    - Issue: The loop break statement was incorrectly placed in the display_countries_for_adventure function.
+    - Resolution: Moved the loop break statement to the correct location to exit the loop after a valid country is chosen.
+
+6. Incorrect Column Index:
+
+    - Issue: Incorrect column index used when retrieving countries for display_countries_for_adventure.
+    - Resolution: Corrected the column index to retrieve the desired countries.
+
+7. Unused Variable:
+
+    - Issue: Unused variable user_preference in the get_user_adventure_preference function.
+    - Resolution: Removed the unused variable to improve code readability.
