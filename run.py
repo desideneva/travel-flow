@@ -102,7 +102,7 @@ def get_user_cultural_preference():
             print("Invalid choice. Please enter 1 or 2.")
 
 
-def display_countries_for_cultural(cultural_preference):
+def display_countries_for_cultural(user_preference):
     """
     Display the list of countries based on user's cultural preference.
     Returns the list of countries.
@@ -137,7 +137,7 @@ def get_user_active_preference():
             print("Invalid choice. Please enter 1 or 2.")
 
 
-def display_countries_for_active(active_preference):
+def display_countries_for_active(user_preference):
     """
     Display the list of countries for Hiking and Trekking or Skiing based on user's preference.
     Args:
@@ -231,8 +231,8 @@ def handle_country_selection(selected_countries):
         if is_valid_country(chosen_country, selected_countries):
             print(f"You chose {chosen_country}. Let's plan your unforgettable journey!")
             restart()
-            else:
-                print("This country is not on our destinations list. Please, choose one from the list.")
+        else:
+            print("This country is not on our destinations list. Please, choose one from the list.")
 
 
 # Function to check if the entered country is in the list
