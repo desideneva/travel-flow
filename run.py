@@ -151,7 +151,29 @@ def display_countries_for_family(family_preference):
     print(", ".join(countries_list))
     handle_country_selection(countries_list)
 
+def get_user_solo_preference():
+    """
+    Prompts the user to choose their solo travel preference and initiates the display of countries list.
+    """
+    print("Please choose your solo preference.")
+    display_countries_for_solo("6")
+
+def display_countries_for_solo(solo_preference):
+    """
+    Retrieves and displays a list of countries suitable for solo travel based on the given preference.
+    """
+    # Retrieve the list of countries from the corresponding column in the spreadsheet
+    countries_list = destinations_worksheet.col_values(11)[1:]
+    print(f"Here are the most popular countries for solo travellers:")
+    print(", ".join(countries_list))
+    handle_country_selection(countries_list)
+
 def handle_country_selection(selected_countries):
+    """
+    Function to handle the user's selection of a country.
+    Keeps prompting the user to enter a valid country from the provided list.
+    Restarts the program if a valid country is chosen; otherwise, asks for a new selection.
+    """
     while True: 
             # Get user's input for the country
             chosen_country = input("Enter the country you want to explore: ")
@@ -171,6 +193,10 @@ def is_valid_country(country, countries_list):
     return country in countries_list
 
 def restart():
+    """
+    Function to prompt the user if they want to start the program again.
+    Accepts 'yes' to restart the program or 'no' to exit.
+    """
     while True:
         choice = input("Do you want to start again? yes / no\n ")
 
