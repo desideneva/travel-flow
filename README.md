@@ -89,3 +89,30 @@ This project is tailored for individuals seeking personalized travel recommendat
 
     - Issue: Unused variable user_preference in the get_user_adventure_preference function.
     - Resolution: Removed the unused variable to improve code readability.
+
+## Deployment
+
+Before deploying to Heroku:
+
+- Add list of dependencies to the requirements.txt file
+   - To create list use this command in terminal: "pip3 freeze > requirements.txt" and the list will be added.
+   - Commit and push
+
+In Heroku
+
+- In dashboard Click 'Create new app'
+- Name app and choose region, click create
+- Go to settings then to config vars
+    - Click on 'Reveal config vars'
+        - Key: CREDS Values: copy your creds.json file and paste it
+        - Then Add
+        - Add another one, Key: PORT Values: 8000
+- Click on 'Add buildpack'
+    - Select python and save changes
+    - Add one more select nodejs and save again
+    - Make sure python comes first
+- Go to deploy and select github and confirm
+- Search for repository
+- Click on connect
+- Select a deployment method
+- Deploy!
