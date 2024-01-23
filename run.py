@@ -56,25 +56,30 @@ def get_user_adventure_preference():
             display_countries_for_adventure(user_choice)
         else:
             print("Invalid choice. Please enter 1 or 2.")
+# Function to display countries based on user's preference
+def display_countries_for_adventure(get_user_adventure_preference):
+    """
+    Display the list of countries based on user's preference.
+    Returns the list of countries.
+    """
+    if user_preference == "1":
+        # Display countries for Adventure
+        adventure_countries = ["New Zealand", "Nepal", "Canada", "Australia", "Costa Rica", "Norway", "Sri Lanka", "Chile", "Bali", "South Africa"]
+        print("Here are the countries for Adventure:")
+        print(", ".join(adventure_countries))
+        handle_country_selection(countries_list)
 
-    def display_countries_for_adventure(user_preference):
-        """
-        Display the list of countries based on user's preference.
-        Returns the list of countries.
-        """
-        if user_preference == "1":
-            # Display countries for Adventure
-            adventure_countries = countries_list = destinations_worksheet.col_values(int(user_preference) + 2)[2:]
-            print("Here are the countries for Adventure:")
-            print(", ".join(adventure_countries))
-            handle_country_selection(countries_list)
-        elif user_preference == "2":
-            # Display countries for Explorer
-            destinations_countries_list = destinations_worksheet.col_values(6)[2:]
-            print("Here are the countries for Explorer:")
-            print(", ".join(explorer_countries))
-            handle_country_selection(countries_list)
-        
+    elif user_preference == "2":
+        # Display countries for Explorer
+        explorer_countries = ["Mongolia", "Papua New Guinea", "Bhutan", "Ethiopia", "Madagascar", "Suriname", "Guyana", "Namibia", "Kyrgyzstan", "Laos"]
+        print("Here are the countries for Explorer:")
+        print(", ".join(explorer_countries))
+        handle_country_selection(countries_list)
+
+
+
+         
+            
 
 def get_user_cultural_preference():
     print("Please choose your cultural preference:")
@@ -90,7 +95,7 @@ def get_user_cultural_preference():
         
 def display_countries_for_cultural(cultural_preference):
     countries_list = destinations_worksheet.col_values(int(cultural_preference) + 1)[1:]
-    print(f"Here are the countries for In-depth Cultural/Food & Culinary:")
+    print(f"Here are the countries for In-depth Cultural:")
     print(", ".join(countries_list))
     handle_country_selection(countries_list)
 
@@ -113,21 +118,21 @@ def display_countries_for_active(active_preference):
     print(", ".join(countries_list))
     handle_country_selection(countries_list)
 
-# Only one option for Relaxing
 def get_user_relaxing_preference():
-    print("Please choose your relaxing preference:")
-    print("1. Health, Spa & Wellbeing")
-
-    while True:
-        user_choice = input("Enter the number of your preference: ")
-        if user_choice == "1":
-            display_countries_for_relaxing(user_choice)
-            break
-        else:
-            print("Invalid choice. Please enter 1.")
+     """
+    Function to prompt the user to choose their relaxing preference.
+    """
+    print("Please choose your relaxing preference.")
+    display_countries_for_relaxing("4")
 
 def display_countries_for_relaxing(relaxing_preference):
-    countries_list = destinations_worksheet.col_values(int(relaxing_preference) + 1)[1:]
+     """
+    Display the list of countries for Health, Spa & Wellbeing based on user's preference.
+    Args:
+        relaxing_preference (str): The user's relaxing preference.
+    """
+    # Retrieve the list of countries from the corresponding column in the spreadsheet
+    countries_list = destinations_worksheet.col_values(8)[1:]
     print(f"Here are the countries for Health, Spa & Wellbeing:")
     print(", ".join(countries_list))
     handle_country_selection(countries_list)
