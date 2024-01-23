@@ -116,6 +116,9 @@ def display_countries_for_cultural(cultural_preference):
         handle_country_selection(countries_list)
 
 def get_user_active_preference():
+    """
+    Prompt the user to choose their preference for active experiences.
+    """
     print("Please choose your active preference:")
     print("1. Hiking and Trekking")
     print("2. Skiing")
@@ -128,10 +131,23 @@ def get_user_active_preference():
             print("Invalid choice. Please enter 1 or 2.")
 
 def display_countries_for_active(active_preference):
-    countries_list = destinations_worksheet.col_values(int(active_preference) + 1)[1:]
-    print(f"Here are the countries for Hiking and Trekking/Skiing:")
-    print(", ".join(countries_list))
-    handle_country_selection(countries_list)
+    """
+    Display the list of countries for Hiking and Trekking or Skiing based on user's preference.
+    Args:
+        active_preference (str): The user's preference for active experiences.
+    """
+    if user_preference == "1":
+        # Display countries for Hiking and Trekking
+        countries_list = destinations_worksheet.col_values(4)[1:]
+        print(f"Here are the top 10 countries for Hiking and Trekking:")
+        print(", ".join(countries_list))
+        handle_country_selection(countries_list)
+    elif user_preference == "2":
+        # Display countries for Skiing
+        countries_list = destinations_worksheet.col_values(9)[1:]
+        print(f"Here are the top 10 countries for Skiing:")
+        print(", ".join(countries_list))
+        handle_country_selection(countries_list)
 
 def get_user_relaxing_preference():
     """
