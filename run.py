@@ -46,6 +46,10 @@ def get_user_preferences():
             print("Invalid input. Please enter a number between 1 and 6.")
 
 def get_user_adventure_preference():
+    """
+    Display options for Adventure and Explorer and get user's choice.
+    Returns the user's choice as a string.
+    """
     print("Please choose your preference:")
     print("1. Adventure")
     print("2. Explorer")
@@ -56,24 +60,25 @@ def get_user_adventure_preference():
             display_countries_for_adventure(user_choice)
         else:
             print("Invalid choice. Please enter 1 or 2.")
+
 # Function to display countries based on user's preference
-def display_countries_for_adventure(get_user_adventure_preference):
+def display_countries_for_adventure(user_preference):
     """
     Display the list of countries based on user's preference.
     Returns the list of countries.
     """
     if user_preference == "1":
         # Display countries for Adventure
-        adventure_countries = ["New Zealand", "Nepal", "Canada", "Australia", "Costa Rica", "Norway", "Sri Lanka", "Chile", "Bali", "South Africa"]
-        print("Here are the countries for Adventure:")
-        print(", ".join(adventure_countries))
+        countries_list = destinations_worksheet.col_values(3)[1:]
+        print("Here are the top 10 countries for Adventurers:")
+        print(", ".join(countries_list))
         handle_country_selection(countries_list)
 
     elif user_preference == "2":
         # Display countries for Explorer
-        explorer_countries = ["Mongolia", "Papua New Guinea", "Bhutan", "Ethiopia", "Madagascar", "Suriname", "Guyana", "Namibia", "Kyrgyzstan", "Laos"]
-        print("Here are the countries for Explorer:")
-        print(", ".join(explorer_countries))
+        countries_list = destinations_worksheet.col_values(7)[1:]
+        print("Here are the top 10 countries for Explorerers:")
+        print(", ".join(countries_list))
         handle_country_selection(countries_list)            
 
 def get_user_cultural_preference():
@@ -89,8 +94,8 @@ def get_user_cultural_preference():
             print("Invalid choice. Please enter 1 or 2.")
         
 def display_countries_for_cultural(cultural_preference):
-    countries_list = destinations_worksheet.col_values(int(cultural_preference) + 1)[1:]
-    print(f"Here are the countries for In-depth Cultural:")
+    countries_list = destinations_worksheet.col_values(5)[1:]
+    print(f"Here are the top 10 countries for In-depth Cultural experience:")
     print(", ".join(countries_list))
     handle_country_selection(countries_list)
 
