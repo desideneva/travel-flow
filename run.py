@@ -82,6 +82,10 @@ def display_countries_for_adventure(user_preference):
         handle_country_selection(countries_list)            
 
 def get_user_cultural_preference():
+    """
+    Display options for Cultural and get user's choice.
+    Returns the user's choice as a string.
+    """
     print("Please choose your cultural preference:")
     print("1. In-depth Cultural")
     print("2. Food & Culinary")
@@ -94,11 +98,22 @@ def get_user_cultural_preference():
             print("Invalid choice. Please enter 1 or 2.")
         
 def display_countries_for_cultural(cultural_preference):
-    countries_list = destinations_worksheet.col_values(5)[1:]
-    print(f"Here are the top 10 countries for In-depth Cultural experience:")
-    print(", ".join(countries_list))
-    handle_country_selection(countries_list)
-
+    """
+    Display the list of countries based on user's cultural preference.
+    Returns the list of countries.
+    """
+    if user_preference == "1":
+        # Display countries for In-depth Cultural
+        countries_list = destinations_worksheet.col_values(5)[1:]
+        print(f"Here are the top 10 countries for In-depth Cultural experience:")
+        print(", ".join(countries_list))
+        handle_country_selection(countries_list)
+    elif user_preference == "2":
+        # Display countries for Food & Culinary
+        countries_list = destinations_worksheet.col_values(6)[1:]
+        print(f"Here are the top 10 countries for Food & Culinary experience:")
+        print(", ".join(countries_list))
+        handle_country_selection(countries_list)
 
 def get_user_active_preference():
     print("Please choose your active preference:")
