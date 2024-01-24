@@ -28,24 +28,27 @@ def get_user_preferences():
     print("1. Adventure\n2. Cultural\n3. Active\n4. Relaxing\n5. Family\n6. Solo")
 
     while True:
-        user_choice = input("Enter the number corresponding to your preference: ")
+        try:
+            user_choice = input("Enter the number corresponding to your preference: ")
 
-        if user_choice.isdigit() and 1 <= int(user_choice) <= 6:
-            if int(user_choice) == 1:
-                get_user_adventure_preference()
-            elif int(user_choice) == 2:
-                get_user_cultural_preference()
-            elif int(user_choice) == 3:
-                get_user_active_preference()
-            elif int(user_choice) == 4:
-                get_user_relaxing_preference()
-            elif int(user_choice) == 5:
-                get_user_family_preference()
-            elif int(user_choice) == 6:
-                get_user_solo_preference()
-        else:
+            if user_choice.isdigit() and 1 <= int(user_choice) <= 6:
+                if int(user_choice) == 1:
+                    get_user_adventure_preference()
+                elif int(user_choice) == 2:
+                    get_user_cultural_preference()
+                elif int(user_choice) == 3:
+                    get_user_active_preference()
+                elif int(user_choice) == 4:
+                    get_user_relaxing_preference()
+                elif int(user_choice) == 5:
+                    get_user_family_preference()
+                elif int(user_choice) == 6:
+                    get_user_solo_preference()
+            else:
+                raise ValueError
+        except ValueError:
             print("Invalid input. Please enter a number between 1 and 6.")
-
+            continue
 
 def get_user_adventure_preference():
     """
