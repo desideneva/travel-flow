@@ -122,8 +122,8 @@ def display_countries_for_cultural(user_preference):
     if user_preference == "1":
         # Display countries for In-depth Cultural
         countries_list = destinations_worksheet.col_values(5)[1:]
-        print(""" Here are the top 10 countries
-              for In-depth Cultural experience: """)
+        print("Here are the top 10 countries\n"
+              "for In-depth Cultural experience:")
         for country in countries_list:
             print(country)
         handle_country_selection(countries_list)
