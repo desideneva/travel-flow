@@ -77,14 +77,16 @@ def display_countries_for_adventure(user_preference):
         # Display countries for Adventure
         countries_list = destinations_worksheet.col_values(3)[1:]
         print("Here are the top 10 countries for Adventurers:")
-        print(", ".join(countries_list))
+        for country in countries_list:
+            print(country)
         handle_country_selection(countries_list)
 
     elif user_preference == "2":
         # Display countries for Explorer
         countries_list = destinations_worksheet.col_values(7)[1:]
         print("Here are the top 10 countries for Explorers:")
-        print(", ".join(countries_list))
+        for country in countries_list:
+            print(country)
         handle_country_selection(countries_list)            
 
 
@@ -113,14 +115,16 @@ def display_countries_for_cultural(user_preference):
     if user_preference == "1":
         # Display countries for In-depth Cultural
         countries_list = destinations_worksheet.col_values(5)[1:]
-        print(f"Here are the top 10 countries for In-depth Cultural experience:")
-        print(", ".join(countries_list))
+        print("Here are the top 10 countries for In-depth Cultural experience:")
+        for country in countries_list:
+            print(country)
         handle_country_selection(countries_list)
     elif user_preference == "2":
         # Display countries for Food & Culinary
         countries_list = destinations_worksheet.col_values(6)[1:]
-        print(f"Here are the top 10 countries for Food & Culinary experience:")
-        print(", ".join(countries_list))
+        print("Here are the top 10 countries for Food & Culinary experience:")
+        for country in countries_list:
+            print(country)
         handle_country_selection(countries_list)
 
 
@@ -149,14 +153,16 @@ def display_countries_for_active(user_preference):
     if user_preference == "1":
         # Display countries for Hiking and Trekking
         countries_list = destinations_worksheet.col_values(4)[1:]
-        print(f"Here are the top 10 countries for Hiking and Trekking:")
-        print(", ".join(countries_list))
+        print("Here are the top 10 countries for Hiking and Trekking:")
+        for country in countries_list:
+            print(country)
         handle_country_selection(countries_list)
     elif user_preference == "2":
         # Display countries for Skiing
         countries_list = destinations_worksheet.col_values(9)[1:]
-        print(f"Here are the top 10 countries for Skiing:")
-        print(", ".join(countries_list))
+        print("Here are the top 10 countries for Skiing:")
+        for country in countries_list:
+            print(country)
         handle_country_selection(countries_list)
 
 
@@ -176,8 +182,9 @@ def display_countries_for_relaxing(relaxing_preference):
     """
     # Retrieve the list of countries from the corresponding column in the spreadsheet
     countries_list = destinations_worksheet.col_values(8)[1:]
-    print(f"Here are the countries for Health, Spa & Wellbeing:")
-    print(", ".join(countries_list))
+    print("Here are the countries for Health, Spa & Wellbeing:")
+    for country in countries_list:
+            print(country)
     handle_country_selection(countries_list)
 
 
@@ -197,8 +204,9 @@ def display_countries_for_family(family_preference):
     """
     # Retrieve the list of countries from the corresponding column in the spreadsheet
     countries_list = destinations_worksheet.col_values(10)[1:]
-    print(f"Here are the countries families prefer to visit:")
-    print(", ".join(countries_list))
+    print("Here are the countries families prefer to visit:")
+    for country in countries_list:
+            print(country)
     handle_country_selection(countries_list)
 
 
@@ -216,8 +224,9 @@ def display_countries_for_solo(solo_preference):
     """
     # Retrieve the list of countries from the corresponding column in the spreadsheet
     countries_list = destinations_worksheet.col_values(11)[1:]
-    print(f"Here are the most popular countries for solo travellers:")
-    print(", ".join(countries_list))
+    print("Here are the most popular countries for solo travellers:")
+    for country in countries_list:
+            print(country)
     handle_country_selection(countries_list)
 
 
