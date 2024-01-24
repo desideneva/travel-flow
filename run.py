@@ -23,15 +23,15 @@ def get_user_preferences():
     Returns:
         int: User preference as a number.
     """
-    print(""" Welcome to Travel-Flow!
-          Let's help you find your ideal destination. """)
+    print("Welcome to Travel-Flow!")
+    print("Let`s help you find your ideal destination.")
     print("What type of travel experience are you looking for?")
-    print(""" 1. Adventure
-           2. Cultural
-           3. Active
-           4. Relaxing
-           5. Family
-           6. Solo """)
+    print("1. Adventure\n"
+          "2. Cultural\n"
+          "3. Active\n"
+          "4. Relaxing\n"
+          "5. Family\n"
+          "6. Solo")
 
     while True:
         try:
@@ -251,12 +251,12 @@ def handle_country_selection(selected_countries):
         chosen_country = input("Enter the country you want to explore: ")
         # Validate the entered country
         if is_valid_country(chosen_country, selected_countries):
-            print(""" You chose {chosen_country}.
-            Let's plan your unforgettable journey! """)
+            print(f"You chose {chosen_country}.\n"
+                  "Let's plan your unforgettable journey!")
             restart()
         else:
-            print(""" This country is not on our destinations list.
-                  Please, choose one from the list. """)
+            print("This country is not on our destinations list.\n"
+                  "Please, choose one from the list.")
 
 
 # Function to check if the entered country is in the list
