@@ -22,14 +22,20 @@ def get_user_preferences():
     Function to get user preferences for the type of travel experience.
     Returns:
         int: User preference as a number.
-    """    
-    print("Welcome to Travel-Flow! Let's help you find your ideal destination.")
+    """
+    print(""" Welcome to Travel-Flow!
+          Let's help you find your ideal destination. """)
     print("What type of travel experience are you looking for?")
-    print("1. Adventure\n2. Cultural\n3. Active\n4. Relaxing\n5. Family\n6. Solo")
+    print(""" 1. Adventure
+           2. Cultural
+           3. Active
+           4. Relaxing
+           5. Family
+           6. Solo """)
 
     while True:
         try:
-            user_choice = input("Enter the number corresponding to your preference: ")
+            user_choice = input("Enter your preference number: ")
 
             if user_choice.isdigit() and 1 <= int(user_choice) <= 6:
                 if int(user_choice) == 1:
@@ -49,6 +55,7 @@ def get_user_preferences():
         except ValueError:
             print("Invalid input. Please enter a number between 1 and 6.")
             continue
+
 
 def get_user_adventure_preference():
     """
@@ -87,7 +94,7 @@ def display_countries_for_adventure(user_preference):
         print("Here are the top 10 countries for Explorers:")
         for country in countries_list:
             print(country)
-        handle_country_selection(countries_list)            
+        handle_country_selection(countries_list)
 
 
 def get_user_cultural_preference():
@@ -115,7 +122,8 @@ def display_countries_for_cultural(user_preference):
     if user_preference == "1":
         # Display countries for In-depth Cultural
         countries_list = destinations_worksheet.col_values(5)[1:]
-        print("Here are the top 10 countries for In-depth Cultural experience:")
+        print(""" Here are the top 10 countries
+              for In-depth Cultural experience: """)
         for country in countries_list:
             print(country)
         handle_country_selection(countries_list)
@@ -146,7 +154,8 @@ def get_user_active_preference():
 
 def display_countries_for_active(user_preference):
     """
-    Display the list of countries for Hiking and Trekking or Skiing based on user's preference.
+    Display the list of countries for Hiking and Trekking
+    or Skiing based on user's preference.
     Args:
         active_preference (str): The user's preference for active experiences.
     """
@@ -180,11 +189,11 @@ def display_countries_for_relaxing(relaxing_preference):
     Args:
         relaxing_preference (str): The user's relaxing preference.
     """
-    # Retrieve the list of countries from the corresponding column in the spreadsheet
+    # Retrieve the countries from the corresponding column in the spreadsheet
     countries_list = destinations_worksheet.col_values(8)[1:]
     print("Here are the countries for Health, Spa & Wellbeing:")
     for country in countries_list:
-            print(country)
+        print(country)
     handle_country_selection(countries_list)
 
 
@@ -202,17 +211,17 @@ def display_countries_for_family(family_preference):
     Args:
         family_preference (str): The user's family preference.
     """
-    # Retrieve the list of countries from the corresponding column in the spreadsheet
+    # Retrieve the countries from the corresponding column in the spreadsheet
     countries_list = destinations_worksheet.col_values(10)[1:]
     print("Here are the countries families prefer to visit:")
     for country in countries_list:
-            print(country)
+        print(country)
     handle_country_selection(countries_list)
 
 
 def get_user_solo_preference():
     """
-    Prompts the user to choose their solo travel preference and display countries list.
+    Prompts the user to choose their solo travel preference.
     """
     print("Please choose your solo preference.")
     display_countries_for_solo("6")
@@ -222,11 +231,11 @@ def display_countries_for_solo(solo_preference):
     """
     Prompts user for solo travel preference and displays country list.
     """
-    # Retrieve the list of countries from the corresponding column in the spreadsheet
+    # Retrieve the countries from the corresponding column in the spreadsheet
     countries_list = destinations_worksheet.col_values(11)[1:]
     print("Here are the most popular countries for solo travellers:")
     for country in countries_list:
-            print(country)
+        print(country)
     handle_country_selection(countries_list)
 
 
@@ -234,17 +243,20 @@ def handle_country_selection(selected_countries):
     """
     Function to handle the user's selection of a country.
     Keeps prompting the user to enter a valid country from the provided list.
-    Restarts the program if a valid country is chosen; otherwise, asks for a new selection.
+    Restarts the program if a valid country is chosen;
+    otherwise, asks for a new selection.
     """
-    while True: 
+    while True:
         # Get user's input for the country
         chosen_country = input("Enter the country you want to explore: ")
         # Validate the entered country
         if is_valid_country(chosen_country, selected_countries):
-            print(f"You chose {chosen_country}. Let's plan your unforgettable journey!")
+            print(""" You chose {chosen_country}.
+            Let's plan your unforgettable journey! """)
             restart()
         else:
-            print("This country is not on our destinations list. Please, choose one from the list.")
+            print(""" This country is not on our destinations list.
+                  Please, choose one from the list. """)
 
 
 # Function to check if the entered country is in the list
@@ -274,21 +286,3 @@ def restart():
 
 
 get_user_preferences()
-
-
-         
-
- 
-
-
- 
-
-
-
-
-
-
-
-
- 
-
