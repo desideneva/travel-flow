@@ -1,5 +1,7 @@
 # Travel Flow
 
+
+
 ## Project Overview:
 Travel-Flow is designed to assist users in finding their ideal travel destination based on their preferences. The project aims to simplify the process of choosing a travel experience by providing options for adventure, cultural exploration, active pursuits, relaxing getaways, family-friendly destinations, and solo adventures. The destination data is sourced from a spreadsheet, offering a diverse range of countries for each travel preference.
 
@@ -11,21 +13,31 @@ This project is tailored for individuals seeking personalized travel recommendat
   
   The project provides a simple and user-friendly interface, ensuring that users can easily navigate through the different travel preferences.
 
+  ![start](assets/start.PNG)
+
 - Wide Range of Destinations:
 
   Travel-Flow sources destination data from a spreadsheet, offering an extensive list of countries for each travel preference. This ensures a comprehensive and varied selection for users.
+
+  ![spreadsheet](assets/gspreadsheet.PNG)
 
 - Dynamic Preference Selection: 
 
   Users can choose from various travel preferences, including adventure, cultural exploration, active pursuits, relaxing getaways, family-friendly destinations, and solo adventures.
 
+  ![selection](assets/selection.PNG)
+
 - Country Validation: 
 
   The project validates user input to ensure that selected countries align with the user's chosen travel preference, providing a seamless and error-free experience.
 
+  ![validation](assets/country-validation.PNG)
+
 - Restart Option:
 
   Users have the option to restart the selection process, providing flexibility in exploring different travel preferences without restarting the entire program.
+
+  ![restart](assets/restart-option.PNG)
 
 ## Additional Features to Implement
 
