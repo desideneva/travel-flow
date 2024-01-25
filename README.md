@@ -146,3 +146,15 @@ In Heroku
 - Click on connect
 - Select a deployment method
 - Deploy!
+
+## Credits
+
+The main guidance and instructions in this project were from [Code Institute](https://codeinstitute.net)
+
+- LMS - Love Sandwiches - help and navigation
+
+Additional tutorial help from: https://docs.python.org/3/tutorial/
+
+## Acknowledgement
+
+- I would like to thank my amazing mentor Daisy for all her support, understanding, advice and for explaining things to me when I did not understand.
