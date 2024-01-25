@@ -186,8 +186,6 @@ In Heroku
 |                                                             |                                                  |                                                      |        |
 | User decides to exit the program                              | Choose 'no' to exit                             | Display a farewell message and exit the program      | PASS   |
 
-
-
 ## Credits
 
 The main guidance and instructions in this project were from [Code Institute](https://codeinstitute.net)
