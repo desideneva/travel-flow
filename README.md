@@ -39,6 +39,10 @@ This project is tailored for individuals seeking personalized travel recommendat
 
   ![restart](assets/restart-option.PNG)
 
+## Logical Chart
+
+![chart](assets/project-chart.PNG)
+
 ## Additional Features to Implement
 
 - Activity Recommendations:
