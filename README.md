@@ -106,6 +106,20 @@ This project is tailored for individuals seeking personalized travel recommendat
     - Issue: Unused variable user_preference in the get_user_adventure_preference function.
     - Resolution: Removed the unused variable to improve code readability.
 
+## Technologies Used
+
+- Python - Language To build the application
+- Google Sheets - To store the countries
+- Google Cloud - To access the data in Google Sheets
+- Lucidchart - To make the flowchart
+- Chrome extension Screen Recorder - To screen recorder the gif for README
+- Ezgif.com - To convert the video to gif
+- Heroku - Used to deploy the project
+- Python - Modules
+    - sys - to add the exit option
+    - gspread - API
+    - google-auth - authentication mechanisms to access Google APIs
+
 ## Deployment
 
 Before deploying to Heroku:
