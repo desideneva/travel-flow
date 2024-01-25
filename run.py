@@ -280,6 +280,7 @@ def restart():
             if choice == "yes":
                 get_user_preferences()
             elif choice == "no":
+                print("Thank you for using Travel-Flow! Have a great day!")
                 sys.exit()
         else:
             print("Invalid option. Type yes or no")

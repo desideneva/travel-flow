@@ -147,6 +147,47 @@ In Heroku
 - Select a deployment method
 - Deploy!
 
+## Testing
+
+### Code Validator
+
+- The code was run through the pep8 validator, any warnings or errors were fixed till it passed without any.
+
+![pep8](assets/py-validation.PNG)
+
+### Manual Testing
+
+| Testing                                                     | Action                                          | Expected                                            | Result |
+|-------------------------------------------------------------|--------------------------------------------------|------------------------------------------------------|--------|
+| User chooses Adventure                                      | Choose Adventure                               | Display Adventure options (1. Adventure, 2. Explorer)| PASS   |
+| - Selects preference 1                                      | - Input 1                                       | Display top 10 countries for Adventurers               | PASS   |
+|                                                             |                                                  |                                                      |        |
+| - Selects preference 2                                      | - Input 2                                       | Display top 10 countries for Explorers                | PASS   |
+|                                                             |                                                  |                                                      |        |
+| User chooses Cultural                                       | Choose Cultural                                | Display Cultural options (1. In-depth Cultural, 2. Food & Culinary)| PASS   |
+| - Selects preference 1                                      | - Input 1                                       | Display top 10 countries for In-depth Cultural        | PASS   |
+|                                                             |                                                  |                                                      |        |
+| - Selects preference 2                                      | - Input 2                                       | Display top 10 countries for Food & Culinary          | PASS   |
+|                                                             |                                                  |                                                      |        |
+| User chooses Active                                         | Choose Active                                  | Display Active options (1. Hiking and Trekking, 2. Skiing)| PASS   |
+| - Selects preference 1                                      | - Input 1                                       | Display top 10 countries for Hiking and Trekking      | PASS   |
+|                                                             |                                                  |                                                      |        |
+| - Selects preference 2                                      | - Input 2                                       | Display top 10 countries for Skiing                   | PASS   |
+|                                                             |                                                  |                                                      |        |
+| User chooses Relaxing                                       | Choose Relaxing                                | Display countries for Health, Spa & Wellbeing          | PASS   |
+|                                                             |                                                  |                                                      |        |
+| User chooses Family                                         | Choose Family                                  | Display countries families prefer to visit            | PASS   |
+|                                                             |                                                  |                                                      |        |
+| User chooses Solo                                           | Choose Solo                                    | Display most popular countries for solo travelers    | PASS   |
+|                                                             |                                                  |                                                      |        |
+| User enters an invalid option during country selection       | Enter an invalid country name                   | Prompt user to choose a country from the list         | PASS   |
+|                                                             |                                                  |                                                      |        |
+| User decides to restart the program after country selection | Choose 'yes' to restart                         | Restart the program with a new set of preferences    | PASS   |
+|                                                             |                                                  |                                                      |        |
+| User decides to exit the program                              | Choose 'no' to exit                             | Display a farewell message and exit the program      | PASS   |
+
+
+
 ## Credits
 
 The main guidance and instructions in this project were from [Code Institute](https://codeinstitute.net)
