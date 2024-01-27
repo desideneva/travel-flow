@@ -1,6 +1,9 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import sys
+from colorama import Fore, Style
+import time
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -17,13 +20,35 @@ destinations_worksheet = SHEET.worksheet("destinations")
 destinations_countries_list = destinations_worksheet.col_values(2)[2:]
 
 
+def print_colorful_heading():
+    """
+    Function to print a colorful heading using colorama.
+    """
+    heading = "HELLO"
+
+    # Set the color to magenta and bright style
+    print(f"{Fore.MAGENTA}{Style.BRIGHT}", end='')
+
+    # Print each character in the heading with a delay
+    for char in heading:
+        print(char, end='', flush=True)
+        time.sleep(0.5)
+
+    # Reset color after printing the heading
+    print(Style.RESET_ALL)
+
+
+# Call the function to print the colorful heading
+print_colorful_heading()
+
+
 def get_user_preferences():
     """
     Function to get user preferences for the type of travel experience.
     Returns:
         int: User preference as a number.
     """
-    print("Welcome to Travel-Flow!")
+    print(f"{Fore.GREEN}Welcome to {Fore.BLUE}Travel-Flow!{Style.RESET_ALL}")
     print("Let`s help you find your ideal destination.")
     print("What type of travel experience are you looking for?")
     print("1. Adventure\n"
