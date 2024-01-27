@@ -48,7 +48,7 @@ def get_user_preferences():
     Returns:
         int: User preference as a number.
     """
-    print(f"{Fore.GREEN}Welcome to {Fore.BLUE}Travel-Flow!{Style.RESET_ALL}")
+    print(f"{Fore.GREEN}Welcome to {Fore.YELLOW}Travel-Flow!{Style.RESET_ALL}")
     print("Let`s help you find your ideal destination.")
     print("What type of travel experience are you looking for?")
     print("1. Adventure\n"
