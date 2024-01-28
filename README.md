@@ -159,7 +159,9 @@ In Heroku
 
 | Testing                                                     | Action                                          | Expected                                            | Result |
 |-------------------------------------------------------------|--------------------------------------------------|------------------------------------------------------|--------|
+| User enters a number greater than 6 for preference selection | Enter 7 for preference selection                 | Display a message for invalid input. Prompt user to enter a number between 1 and 6  | PASS   |
 | User chooses Adventure                                      | Choose Adventure                               | Display Adventure options (1. Adventure, 2. Explorer)| PASS   |
+| User makes an invalid sub-selection (not 1 or 2)             | Enter 3 for sub-selection                       | Display a message for invalid choice. Prompt user to enter 1 or 2  | PASS   |
 | - Selects preference 1                                      | - Input 1                                       | Display top 10 countries for Adventurers               | PASS   |
 |                                                             |                                                  |                                                      |        |
 | - Selects preference 2                                      | - Input 2                                       | Display top 10 countries for Explorers                | PASS   |
